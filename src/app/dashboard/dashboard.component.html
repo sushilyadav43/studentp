@@ -1,21 +1,26 @@
-<div class="row d-flex flex-column main-container">
-    <div class="card card-menu">
-        <div class="card-body">
-            <div class="d-flex flex-row ">
-            <ul style="text-align: center;margin-top: 5px;">
-                <li >
-                    <a>Home</a>
-                    <a>Menu</a>
-                    <a>Students</a>
-                    <a>Courses</a>
-                    <a>About</a>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </div>
+<div class="main-container">
+    <nav>
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">MovieZ</label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a routerLink="popular" href="#">Popular Movies</a></li>
+            <li><a routerLink="list" href="#">Upcomming Movies</a></li>
+            <li><a routerLink="top" href="#">Top Rated Movies</a></li>
+            <li><a href="#">Sci-fi Movies</a></li>
+            <button (click)="logout()" class="btn btn-success">Logout</button>
+        </ul>
+    </nav>
+    <!-- <div *ngFor="let movie of movieList">{{movie.title}}</div> -->
+    <router-outlet></router-outlet>
 </div>
-<div class="column d-flex flex-column side-container">
-</div>
+
+
+<!-- <div class="logout">
+    <button (click)="logout()" type="btn btn-sucess">Logout</button>
+</div> -->
+
 
 

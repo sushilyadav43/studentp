@@ -1,8 +1,10 @@
 .register-container {
     background-color: #7a5563;
-    height: 100vh;
+    height: 100%;
 }
 .register-form {
     width: 600px;
-    background-color: #a59ea1;
+    background-color: #e7e7e7;
+    margin: 10px;
+    margin-bottom: 10px;
 }

@@ -1,27 +1,59 @@
 .main-container {
-    background-color: blue;
-   height: 85px;
-}
-.side-container {
-    background-color: rgb(1, 1, 37);
-   height: calc(100vh - 85px);
-   width: 85px;
-} 
-ul li a {
-    padding: 20px 30px 20px 30px;
-    font-size: 25px;
-    /* background-color: yellow; */
-
-
-}
-a:hover {
-    background-color: yellow;
-}
-.card-menu {
-    background-color: blue;
-    max-height: 85px;
+    background-color: rgb(238, 236, 236);
+    height: 100vh;
 }
 
+nav {
+    background-color: #0082e6;
+    height: 85px;
+    width: 100%;
+}
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 8px;
+    margin: 0 5px;
+    padding: 0 20px;
+}
+nav ul li a {
+    color: white;
+    line-height: 85px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+li:hover {
+ background-color: black;
+}
+a {
+    text-decoration: none;
+}
+/* a:hover {
+    background-color: rgb(170, 170, 150);
+} */
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    line-height: 80px;
+}
+
+
+/* .sdfsdfs{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+} */
 
 
 
