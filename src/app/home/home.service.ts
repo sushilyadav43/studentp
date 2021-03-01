@@ -7,10 +7,7 @@ import { environment } from "../../environments/environment";
     providedIn:"root"
 })
 
-export class TopService {
-    // getSingleMovie(id: any) {
-    //   throw new Error('Method not implemented.');
-    // }
+export class HomeService {
     apiKey = environment.API_KEY;
     constructor(private http:HttpClient) {
 
@@ -18,6 +15,10 @@ export class TopService {
     
     getMovieList():Observable<any> {
         // return this.http.get(`https://api.themoviedb.org/3/movie/latest?api_key=${this.apiKey}&language=en-US`)
-        return this.http.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}&language=en-US&page=1`)
+        return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}&language=en-US&page=1`)
+    }
+    getMovieItem():Observable<any> {
+        // return this.http.get(`https://api.themoviedb.org/3/movie/latest?api_key=${this.apiKey}&language=en-US`)
+        return this.http.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`)
     }
 }

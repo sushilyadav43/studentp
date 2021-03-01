@@ -1,22 +1,23 @@
 <div class="list">
     <div class="row w-100">
-        <div class="col-md-3" *ngFor="let movie of movieList">
-            <div class="card mb-2">
+        <div class="col-md-3 col-sm-3" *ngFor="let movie of movieList">
+            <div class="card mb-2 bg-primary ml-2">
                 <img [src]="getImgURL(movie.poster_path)" alt="">
                 <div class="card-body" style="color: rgb(0, 0, 0);">
                     <div>
                         Title:<span>{{movie.title}}</span>
-                       </div>
-                        <div>
-                            Rating:<span >{{movie.vote_average}}</span>
-                        </div>
-                        <div>
-                            Release Date:<span>{{movie.release_date}}</span>
-                        </div>
-                        <div>
-                            Language:<span>{{movie.original_language}}</span>
-                        </div>
-
+                    </div>
+                    <div>
+                        Rating:<span>{{movie.vote_average}}</span>
+                    </div>
+                    <div>
+                        Release Date:<span>{{movie.release_date}}</span>
+                    </div>
+                    <div>
+                        Language:<span>{{movie.original_language}}</span>
+                    </div>
+                    <!-- <a routerLink="/top-view/{{movie.id}}"  class="btn btn-primary">Download</a> -->
+                    <a href="#" class="btn btn-outline-success">Download</a>
                 </div>
 
             </div>
@@ -24,4 +25,3 @@
 
     </div>
 </div>
-

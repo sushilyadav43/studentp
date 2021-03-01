@@ -10,9 +10,12 @@ import { ListService } from "./list.service";
 })
 export class ListComponent implements OnInit {
   movieList:any
+  imgBaseUrl : any
 
   constructor(private routes:Router, private listservice:ListService) {
     this.movieList = [];
+    this.imgBaseUrl = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2"
+    
 
     this.listservice.getMovieList().subscribe(movie => {
       this.movieList = movie.results;
@@ -30,5 +33,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  getImgURL(imgId:any){
+    return `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${imgId}`
+  }
 }

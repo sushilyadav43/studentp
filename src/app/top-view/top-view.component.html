@@ -1,0 +1,28 @@
+<div class="list">
+    <div class="row w-100">
+        <div class="col-md-3" *ngFor="let movie of movieList">
+            <div class="card mb-2">
+                <!-- <img [src]="getImgURL(movie.poster_path)" alt=""> -->
+                <div class="card-body" style="color: rgb(0, 0, 0);">
+                    <div>
+                        Title:<span>{{top.title}}</span>
+                       </div>
+                        <div>
+                            Rating:<span >{{top.vote_average}}</span>
+                        </div>
+                        <div>
+                            Release Date:<span>{{top.release_date}}</span>
+                        </div>
+                        <div>
+                            Language:<span>{{top.original_language}}</span>
+                        </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

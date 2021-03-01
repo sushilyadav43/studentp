@@ -1,6 +1,10 @@
 <div class="list">
+    <div class="title" style="text-align: center;color: midnightblue;font-size: 30px;">Popular Movies <span> <form class="d-flex">
+        <input class="form-control me-2" style="width: 200px; margin-left: 10px;" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form></span></div><br>
     <div class="row w-100">
-        <div class="col-md-3 col-sm-3" *ngFor="let movie of movieList">
+        <div class="col-md-3" *ngFor="let movie of movieList">
             <div class="card mb-2 ml-2 bg-primary">
                 <img [src]="getImgURL(movie.poster_path)" alt="">
                 <div class="card-body" style="color: rgb(0, 0, 0);">
@@ -17,7 +21,6 @@
                         Language:<span>{{movie.original_language}}</span>
                     </div>
                     <a href="#" class="btn btn-outline-success">Download</a>
-
                 </div>
 
             </div>

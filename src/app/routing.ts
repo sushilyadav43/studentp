@@ -5,6 +5,8 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ListComponent } from "./list/list.component";
 import { PopularComponent } from "./popular/popular.component";
 import { TopComponent } from "./top/top.component";
+// import { TopViewComponent } from "./top-view/top-view.component";
+import { HomeComponent } from "./home/home.component";
 
 
 
@@ -22,6 +24,15 @@ export const router:Routes = [
     path:"dashboard",
     component:DashboardComponent,
     children:[
+      {
+         path:"home",
+         component:HomeComponent
+      },
+      {
+         path:"",
+         redirectTo:"/dashboard/home",
+         pathMatch:"full"
+        },
        {
           path:"list",
           component:ListComponent
@@ -35,9 +46,9 @@ export const router:Routes = [
           component:TopComponent
        },
       //  {
-      //    path:"view/:id",
-      //    component:ListComponent
-      // }
+      //     path:"top-view/:id",
+      //     component:TopViewComponent
+      //  },
     ]
    },
    {
