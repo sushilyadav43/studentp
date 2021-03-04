@@ -1,18 +1,33 @@
-<div class="main-container">
-    <nav>
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">MovieZ</label>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a routerLink="popular" href="#">Popular Movies</a></li>
-            <li><a routerLink="list" href="#">Upcomming Movies</a></li>
-            <li><a routerLink="top" href="#">Top Rated Movies</a></li>
-            <li><a href="#">Sci-fi Movies</a></li>
-            <button (click)="logout()" class="btn btn-success">Logout</button>
-        </ul>
-    </nav>
+
+<nav class="navbar navbar-app" style="position: fixed;z-index: 1;">
+    
+    <!-- <label class="logo">MovieZ</label> -->
+    <a class=" navbar-brand logo" href="">MovieZ</a>
+    <ul class="navbar-nav flex-row flex-wrap h-100">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="home">Home</a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link active" routerLink="popular">Popular Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="list">Upcomming Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="top">Top Rated Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="recommended">Recommended Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="latest">Latest Movies</a>
+          </li>
+    </ul>
+    <button (click)="logout()" class="btn btn-success">Logout</button>
+</nav>
+
+<div class="main-container" style="padding-top: 103px" >
+    
     <!-- <div *ngFor="let movie of movieList">{{movie.title}}</div> -->
     <router-outlet></router-outlet>
 </div>

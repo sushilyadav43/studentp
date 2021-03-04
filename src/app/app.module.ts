@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from "@angular/router";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { NgxSpinnerModule } from "ngx-bootstrap-spinner";
 
 import { router } from "./routing";
 import { AppComponent } from './app.component';
@@ -13,7 +14,9 @@ import { ListComponent } from './list/list.component';
 import { PopularComponent } from './popular/popular.component';
 import { TopComponent } from './top/top.component';
 import { HomeComponent } from './home/home.component';
-// import { TopViewComponent } from './top-view/top-view.component';
+import { TopViewComponent } from './top-view/top-view.component';
+import { RecommendedComponent } from './recommended/recommended.component';
+import { LatestComponent } from './latest/latest.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +28,20 @@ import { HomeComponent } from './home/home.component';
     PopularComponent,
     TopComponent,
     HomeComponent,
-    // TopViewComponent,
+    TopViewComponent,
+    RecommendedComponent,
+    LatestComponent
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(router),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxSpinnerModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

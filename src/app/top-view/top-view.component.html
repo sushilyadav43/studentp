@@ -1,28 +1,57 @@
-<div class="list">
-    <div class="row w-100">
-        <div class="col-md-3" *ngFor="let movie of movieList">
-            <div class="card mb-2">
-                <!-- <img [src]="getImgURL(movie.poster_path)" alt=""> -->
+<!-- <div class="login-container justify-content-center align-items-center d-flex flex-wrap">
+     <div class="row w-100">
+        <div class="col-md-3">
+            <div class="card mb-2" style="background-color: rgb(20, 20, 114);">
+                <img [src]="getImgURL(movie.poster_path)" alt="">
                 <div class="card-body" style="color: rgb(0, 0, 0);">
+                    <div class="d-flex flex-column">
                     <div>
-                        Title:<span>{{top.title}}</span>
+                        Title:<span>{{movie.title}}</span>
                        </div>
                         <div>
-                            Rating:<span >{{top.vote_average}}</span>
+                            Rating:<span >{{movie.vote_average}}</span>
                         </div>
                         <div>
-                            Release Date:<span>{{top.release_date}}</span>
+                            Release Date:<span>{{movie.release_date}}</span>
                         </div>
                         <div>
-                            Language:<span>{{top.original_language}}</span>
+                            Release Date:<span>{{movie.overview}}</span>
                         </div>
-
+                        <div>
+                            Language:<span>{{movie.original_language}}</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
+    </div> -->
 
+<div class="view-container justify-content-center align-items-center d-flex flex-wrap">
+    <!-- <div class="card view-body"> -->
+    <div class="card-body">
+        <div class="d-flex flex-column">
+            <div class="u-img">
+                <img [src]="getImgURL(movie.poster_path)" alt="">
+            </div>
+            <div class="title">
+                <div>
+                    Title:<span>{{movie.title}}</span>
+                </div>
+                <div>
+                    Rating:<span>{{movie.vote_average}}</span>
+                </div>
+                <div>
+                    Release Date:<span>{{movie.release_date}}</span>
+                </div>
+                <div>
+                    Over View:<span>{{movie.overview}}</span>
+                </div>
+                <div>
+                    Language:<span>{{movie.original_language}}</span>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- </div> -->
 </div>
-
-

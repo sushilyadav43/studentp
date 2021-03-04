@@ -8,7 +8,7 @@
                         Title:<span>{{movie.title}}</span>
                     </div>
                     <div>
-                        Rating:<span>{{movie.vote_average}}</span>
+                        Rating:<span>{{movie.vote_average}} &#9733;&#9733;&#9733;</span>
                     </div>
                     <div>
                         Release Date:<span>{{movie.release_date}}</span>
@@ -16,7 +16,7 @@
                     <div>
                         Language:<span>{{movie.original_language}}</span>
                     </div>
-                    <a href="#" class="btn btn-outline-success">Download</a>
+                    <a routerLink="../top-view/{{movie.id}}" href="#" class="btn btn-outline-success">View</a>
 
                 </div>
 

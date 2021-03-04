@@ -1,0 +1,25 @@
+.view-container {
+    background-color: rgb(238, 236, 236);
+    height: 100vh;
+    background-image: url(https://wallpapercave.com/wp/wp5754766.jpg);
+}
+/* .view-body {
+    width: 500px;
+    max-height: 570px;
+    background-color: blue;
+    background-image: url(https://wallpapercave.com/wp/wp3285523.jpg);
+} */
+.u-img {
+        height: 340px;
+        width: 340px;
+        align-self: center
+}
+.u-img img {
+    height: 100%;
+    width: 100%;
+}
+.title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+}

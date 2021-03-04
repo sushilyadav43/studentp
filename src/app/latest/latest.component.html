@@ -1,23 +1,22 @@
-<ngx-bootstrap-spinner></ngx-bootstrap-spinner>
 <div class="list">
     <div class="row w-100">
-        <div class="col-md-3 col-sm-3" *ngFor="let movie of movieList">
+        <div class="col-md-3 col-sm-3">
             <div class="card mb-2 ml-2 bg-primary">
-                <img [src]="getImgURL(movie.poster_path)" alt="">
+                <img [src]="getImgURL(movieList.poster_path)" alt="">
                 <div class="card-body" style="color: rgb(7, 10, 7);">
                    <div>
-                    Title:<span>{{movie.title}}</span>
+                    Title:<span>{{movieList.title}}</span>
                    </div>
                     <div>
-                        Rating:<span>{{movie.vote_average}}</span>
+                        Rating:<span>{{movieList.vote_average}}</span>
                     </div>
                     <div>
-                        Release Date:<span>{{movie.release_date}} &#9733;&#9733;&#9733;</span>
+                        Release Date:<span>{{movieList.release_date}} &#9733;&#9733;&#9733;</span>
                     </div>
                     <div>
-                        Language:<span>{{movie.original_language}}</span>
+                        Language:<span>{{movieList.original_language}}</span>
                     </div>
-                    <a routerLink="../top-view/{{movie.id}}" href="#" class="btn btn-outline-success">View</a>
+                    <!-- <a routerLink="../top-view/{{movie.id}}" href="#" class="btn btn-outline-success">View</a> -->
                 </div>
 
             </div>
@@ -28,5 +27,6 @@
 
 <!-- <div *ngFor="let movie of movieList">{{movie.title}}</div>
     <div *ngFor="let movie of movieList">{{movie.vote_average}}</div> -->
+
 
 
